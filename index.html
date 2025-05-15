@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>C++ Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction_to_C++">Introduction to C++</a></li>
+            <li><a class="nav-link" href="#Variables_and_basic_data_types">Variables and basic data types</a></li>
+            <li><a class="nav-link" href="#Const">Const</a></li>
+            <li><a class="nav-link" href="#Namespaces">Namespaces</a></li>
+            <li><a class="nav-link" href="#Typedef_and_type_aliases">Typedef and type aliases</a></li>
+            <li><a class="nav-link" href="#Arithmetic_operators">Arithmetic operators</a></li>
+            <li><a class="nav-link" href="#Type_conversion">Type conversion</a></li>
+            <li><a class="nav-link" href="#User_input">User input</a></li>
+            <li><a class="nav-link" href="#Useful_math_related_functions">Useful math related functions</a></li>
+            <li><a class="nav-link" href="#If_statements">If statements</a></li>
+            <li><a class="nav-link" href="#Switches">Switches</a></li>
+            <li><a class="nav-link" href="#Ternary_operator">Ternary operator</a></li>
+            <li><a class="nav-link" href="#Logical_operators">Logical operators</a></li>
+            <li><a class="nav-link" href="#Useful_string_methods_in_C++">Useful string methods in C++</a></li>
+            <li><a class="nav-link" href="#While_loops">While loops</a></li>
+            <li><a class="nav-link" href="#Do_while_loops">Do while loops</a></li>
+            <li><a class="nav-link" href="#For_loops">For loops</a></li>
+            <li><a class="nav-link" href="#Break_&_continue">Break & continue</a></li>
+            <li><a class="nav-link" href="#Nested_loops">Nested loops</a></li>
+            <li><a class="nav-link" href="#Arrays">Arrays</a></li>
+            <li><a class="nav-link" href="#Sizeof()_operator">Sizeof() operator</a></li>
+            <li><a class="nav-link" href="#Iterate_over_an_array">Iterate over an array</a></li>
+            <li><a class="nav-link" href="#Foreach_loop">Foreach loop</a></li>
+            <li><a class="nav-link" href="#Pass_array_to_a_function">Pass array to a function</a></li>
+            <li><a class="nav-link" href="#Search_an_array_for_an_element">Search an array for an element</a></li>
+            <li><a class="nav-link" href="#Sort_an_array">Sort an array</a></li>
+            <li><a class="nav-link" href="#Fill()_function">Fill() function</a></li>
+            <li><a class="nav-link" href="#Fill_an_array_with_user_input">Fill an array with user input</a></li>
+            <li><a class="nav-link" href="#Multidimensional_arrays">Multidimensional arrays</a></li>
+            <li><a class="nav-link" href="#Memory_addresses">Memory addresses</a></li>
+            <li><a class="nav-link" href="#Pass_by_VALUE_vs_pass_by_REFERENCE">Pass by VALUE vs pass by REFERENCE</a></li>
+            <li><a class="nav-link" href="#Const_parameters">Const parameters</a></li>
+            <li><a class="nav-link" href="#Pointers">Pointers</a></li>
+            <li><a class="nav-link" href="#Null_pointers">Null pointers</a></li>
+            <li><a class="nav-link" href="#Dynamic_memory">Dynamic memory</a></li>
+            <li><a class="nav-link" href="#Recursion">Recursion</a></li>
+            <li><a class="nav-link" href="#Function_templates">Function templates</a></li>
+            <li><a class="nav-link" href="#Structs">Structs</a></li>
+            <li><a class="nav-link" href="#Pass_structs_as_arguments">Pass structs as arguments</a></li>
+            <li><a class="nav-link" href="#Enums">Enums</a></li>
+            <li><a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a></li>
+            <li><a class="nav-link" href="#Constructors">Constructors</a></li>
+            <li><a class="nav-link" href="#Constructor_overloading">Constructor overloading</a></li>
+            <li><a class="nav-link" href="#Getters_&_setters">Getters & setters</a></li>
+            <li><a class="nav-link" href="#Inheritance">Inheritance</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction_to_C++">
+            <header>Introduction to C++</header>
+            <article>
+                <p>
+                    C++ is a powerful, general-purpose programming language that extends C with object-oriented and generic programming features. It’s widely used for system programming, game development, and high-performance applications due to its efficiency and control over hardware.
+                </p>
+                <p>
+                    This tutorial assumes basic knowledge of computers and introduces C++ concepts step-by-step, from variables to object-oriented programming, with practical examples.
+                </p>
+                <ul>
+                    <li>C++ supports procedural, object-oriented, and generic programming.</li>
+                    <li>It’s used in applications like game engines (e.g., Unreal Engine) and operating systems.</li>
+                    <li>Compilers like g++ or clang++ are needed to run C++ code.</li>
+                    <li>The Standard Template Library (STL) provides reusable components like vectors.</li>
+                    <li>This guide assumes basic computer knowledge and introduces C++ step-by-step.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Variables_and_basic_data_types">
+            <header>Variables and basic data types</header>
+            <article>
+                <p>
+                    Variables store data in a C++ program. They must be declared with a specific type:
+                    <code>
+                        int age = 25; // Integer
+                        double price = 19.99; // Floating-point
+                        char grade = 'A'; // Character
+                        bool isActive = true; // Boolean
+                        std::string name = "Alice"; // String (requires &lt;string&gt; header)
+                    </code>
+                </p>
+                <p>
+                    Identifiers must start with a letter or underscore, followed by letters, digits, or underscores. C++ is case-sensitive.
+                </p>
+                <ul>
+                    <li><code>int</code> for whole numbers like 25 or -10.</li>
+                    <li><code>double</code> for decimals like 19.99.</li>
+                    <li><code>char</code> for single characters like 'A'.</li>
+                    <li><code>bool</code> for true/false values.</li>
+                    <li><code>std::string</code> for text, requires <code>&lt;string&gt;</code> header.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Const">
+            <header>Const</header>
+            <article>
+                <p>
+                    The <code>const</code> keyword declares immutable variables:
+                    <code>const double PI = 3.14159;</code>
+                </p>
+                <p>
+                    Constants must be initialized at declaration and cannot be modified. <code>constexpr</code> ensures compile-time evaluation:
+                    <code>constexpr int MAX = 100;</code>
+                </p>
+                <ul>
+                    <li>Constants like <code>PI</code> cannot be changed after initialization.</li>
+                    <li><code>constexpr</code> for compile-time constants like <code>MAX</code>.</li>
+                    <li>Follows same naming rules as variables.</li>
+                    <li>Prevents accidental modification of critical values.</li>
+                    <li>Cannot share names with variables in the same scope.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Namespaces">
+            <header>Namespaces</header>
+            <article>
+                <p>
+                    Namespaces prevent name conflicts by grouping code:
+                    <code>
+                        namespace mySpace {
+                            int x = 10;
+                        }
+                        int main() {
+                            std::cout &lt;&lt; mySpace::x; // Access with scope resolution
+                            return 0;
+                        }
+                    </code>
+                </p>
+                <p>
+                    Use <code>using namespace std;</code> to avoid <code>std::</code> prefixes, but sparingly to avoid conflicts.
+                </p>
+                <ul>
+                    <li>Groups related code to avoid naming conflicts.</li>
+                    <li>Access with <code>::</code> operator, e.g., <code>mySpace::x</code>.</li>
+                    <li><code>std</code> namespace includes standard library.</li>
+                    <li><code>using namespace</code> can simplify code but risks conflicts.</li>
+                    <li>Supports nested namespaces for complex projects.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Typedef_and_type_aliases">
+            <header>Typedef and type aliases</header>
+            <article>
+                <p>
+                    <code>typedef</code> creates aliases for types:
+                    <code>typedef unsigned long ulong;</code>
+                </p>
+                <p>
+                    C++11’s <code>using</code> is more flexible:
+                    <code>using str = std::string;</code>
+                    <code>str name = "Bob";</code>
+                </p>
+                <ul>
+                    <li><code>typedef</code> simplifies complex type names.</li>
+                    <li><code>using</code> is preferred in modern C++.</li>
+                    <li>Improves code readability.</li>
+                    <li>Useful for function pointers or templates.</li>
+                    <li>Can alias any type, including classes.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Arithmetic_operators">
+            <header>Arithmetic operators</header>
+            <article>
+                <p>
+                    C++ supports operators like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code> (modulus):
+                    <code>
+                        int a = 10, b = 3;
+                        int sum = a + b; // 13
+                        int mod = a % b; // 1
+                    </code>
+                </p>
+                <p>
+                    Increment (<code>++</code>) and decrement (<code>--</code>) modify variables:
+                    <code>a++; // a = 11</code>
+                </p>
+                <ul>
+                    <li>Addition: <code>a + b</code> for summing values.</li>
+                    <li>Subtraction: <code>a - b</code> for differences.</li>
+                    <li>Multiplication: <code>a * b</code> for products.</li>
+                    <li>Division: <code>a / b</code>, integer division truncates.</li>
+                    <li>Modulus: <code>a % b</code> for remainders.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Type_conversion">
+            <header>Type conversion</header>
+            <article>
+                <p>
+                    Convert between types explicitly with casts:
+                    <code>
+                        double d = 5.7;
+                        int i = static_cast&lt;int&gt;(d); // i = 5
+                    </code>
+                </p>
+                <p>
+                    Implicit conversion occurs in mixed-type operations:
+                    <code>
+                        int x = 10;
+                        double y = x; // y = 10.0
+                    </code>
+                </p>
+                <ul>
+                    <li>Explicit casting with <code>static_cast</code>.</li>
+                    <li>Implicit conversion in assignments or expressions.</li>
+                    <li>May lose precision (e.g., <code>double</code> to <code>int</code>).</li>
+                    <li><code>dynamic_cast</code> for polymorphic types.</li>
+                    <li>C-style casts (<code>(int)d</code>) are less safe.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="User_input">
+            <header>User input</header>
+            <article>
+                <p>
+                    Use <code>std::cin</code> to read input:
+                    <code>
+                        #include &lt;iostream&gt;
+                        int main() {
+                            int num;
+                            std::cout &lt;&lt; "Enter a number: ";
+                            std::cin &gt;&gt; num;
+                            return 0;
+                        }
+                    </code>
+                </p>
+                <p>
+                    Read strings with <code>std::getline</code>:
+                    <code>
+                        #include &lt;string&gt;
+                        std::string name;
+                        std::getline(std::cin, name);
+                    </code>
+                </p>
+                <ul>
+                    <li><code>std::cin</code> reads space-separated input.</li>
+                    <li><code>std::getline</code> reads entire lines.</li>
+                    <li>Requires <code>&lt;iostream&gt;</code> for input/output.</li>
+                    <li>Check errors with <code>std::cin.fail()</code>.</li>
+                    <li>Use <code>std::cin.ignore()</code> to clear input buffer.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Useful_math_related_functions">
+            <header>Useful math related functions</header>
+            <article>
+                <p>
+                    The <code>&lt;cmath&gt;</code> header provides functions like:
+                    <code>
+                        #include &lt;cmath&gt;
+                        double x = std::sqrt(16); // 4.0
+                        double y = std::pow(2, 3); // 8.0
+                        double z = std::abs(-5); // 5
+                    </code>
+                </p>
+                <ul>
+                    <li><code>std::sqrt</code> computes square roots.</li>
+                    <li><code>std::pow</code> raises numbers to powers.</li>
+                    <li><code>std::abs</code> returns absolute values.</li>
+                    <li><code>std::round</code> rounds to nearest integer.</li>
+                    <li><code>std::ceil</code> rounds up to next integer.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="If_statements">
+            <header>If statements</header>
+            <article>
+                <p>
+                    Execute code if a condition is true:
+                    <code>
+                        if (x &gt; 0) {
+                            std::cout &lt;&lt; "Positive";
+                        } else if (x &lt; 0) {
+                            std::cout &lt;&lt; "Negative";
+                        } else {
+                            std::cout &lt;&lt; "Zero";
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Basic <code>if</code> checks a condition.</li>
+                    <li><code>else if</code> handles additional conditions.</li>
+                    <li><code>else</code> covers all other cases.</li>
+                    <li>Use braces for multiple statements.</li>
+                    <li>Conditions must evaluate to true/false.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Switches">
+            <header>Switches</header>
+            <article>
+                <p>
+                    <code>switch</code> evaluates a variable against cases:
+                    <code>
+                        switch (day) {
+                            case 1: std::cout &lt;&lt; "Monday"; break;
+                            default: std::cout &lt;&lt; "Unknown";
+                        }
+                    </code>
+                </p>
+                <p>Use <code>break</code> to prevent fall-through.</p>
+                <ul>
+                    <li>Compares variable to case values.</li>
+                    <li><code>break</code> exits the switch block.</li>
+                    <li><code>default</code> handles unmatched cases.</li>
+                    <li>Works with <code>int</code>, <code>char</code>, etc.</li>
+                    <li>More readable than chained <code>if-else</code>.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Ternary_operator">
+            <header>Ternary operator</header>
+            <article>
+                <p>
+                    A shorthand for <code>if-else</code>:
+                    <code>
+                        int max = (a &gt; b) ? a : b;
+                    </code>
+                </p>
+                <ul>
+                    <li>Syntax: <code>condition ? valueIfTrue : valueIfFalse</code>.</li>
+                    <li>Concise for simple conditions.</li>
+                    <li>Returns a value, unlike <code>if</code>.</li>
+                    <li>Avoid nesting for readability.</li>
+                    <li>Useful in assignments or expressions.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Logical_operators">
+            <header>Logical operators</header>
+            <article>
+                <p>
+                    Combine conditions with <code>&amp;&amp;</code> (and), <code>||</code> (or), <code>!</code> (not):
+                    <code>
+                        if (x &gt; 0 &amp;&amp; y &gt; 0) {
+                            std::cout &lt;&lt; "Both positive";
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li><code>&amp;&amp;</code> requires both conditions true.</li>
+                    <li><code>||</code> requires at least one true.</li>
+                    <li><code>!</code> inverts truth value.</li>
+                    <li>Short-circuit evaluation optimizes checks.</li>
+                    <li>Used in complex conditionals.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Useful_string_methods_in_C++">
+            <header>Useful string methods in C++</header>
+            <article>
+                <p>
+                    The <code>std::string</code> class offers methods:
+                    <code>
+                        std::string s = "Hello";
+                        int len = s.length(); // 5
+                        s.append(" World"); // "Hello World"
+                        char c = s.at(0); // 'H'
+                    </code>
+                </p>
+                <ul>
+                    <li><code>length()</code> returns string length.</li>
+                    <li><code>append()</code> adds text to end.</li>
+                    <li><code>at()</code> accesses characters safely.</li>
+                    <li><code>substr()</code> extracts substrings.</li>
+                    <li><code>find()</code> locates text position.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="While_loops">
+            <header>While loops</header>
+            <article>
+                <p>
+                    Execute while a condition is true:
+                    <code>
+                        int i = 0;
+                        while (i &lt; 5) {
+                            std::cout &lt;&lt; i++;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Checks condition before each iteration.</li>
+                    <li>Executes only if condition is true.</li>
+                    <li>Risk of infinite loops if condition persists.</li>
+                    <li>Use braces for multiple statements.</li>
+                    <li>Common for dynamic iteration counts.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Do_while_loops">
+            <header>Do while loops</header>
+            <article>
+                <p>
+                    Execute at least once, then continue if true:
+                    <code>
+                        int i = 0;
+                        do {
+                            std::cout &lt;&lt; i++;
+                        } while (i &lt; 5);
+                    </code>
+                </p>
+                <ul>
+                    <li>Executes at least once.</li>
+                    <li>Condition checked after iteration.</li>
+                    <li>Useful for input validation loops.</li>
+                    <li>Braces for multiple statements.</li>
+                    <li>Can become infinite if condition persists.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="For_loops">
+            <header>For loops</header>
+            <article>
+                <p>
+                    Loop with initialization, condition, and update:
+                    <code>
+                        for (int i = 0; i &lt; 5; i++) {
+                            std::cout &lt;&lt; i;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Initialization runs once.</li>
+                    <li>Condition checked before each iteration.</li>
+                    <li>Update runs after each iteration.</li>
+                    <li>Ideal for fixed iteration counts.</li>
+                    <li>Combines loop control in one line.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Break_&_continue">
+            <header>Break & continue</header>
+            <article>
+                <p>
+                    <code>break</code> exits a loop; <code>continue</code> skips to the next iteration:
+                    <code>
+                        for (int i = 0; i &lt; 5; i++) {
+                            if (i == 3) break; // Exits loop
+                            if (i == 1) continue; // Skips 1
+                            std::cout &lt;&lt; i;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li><code>break</code> stops loop immediately.</li>
+                    <li><code>continue</code> skips current iteration.</li>
+                    <li>Works in all loop types.</li>
+                    <li>Useful for conditional loop control.</li>
+                    <li>Can improve loop efficiency.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Nested_loops">
+            <header>Nested loops</header>
+            <article>
+                <p>
+                    Loops within loops:
+                    <code>
+                        for (int i = 0; i &lt; 3; i++) {
+                            for (int j = 0; j &lt; 2; j++) {
+                                std::cout &lt;&lt; i &lt;&lt; j;
+                            }
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Inner loop runs fully for each outer iteration.</li>
+                    <li>Used for multidimensional data.</li>
+                    <li>Can be computationally intensive.</li>
+                    <li><code>break</code> affects innermost loop.</li>
+                    <li>Common in matrix operations.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Arrays">
+            <header>Arrays</header>
+            <article>
+                <p>
+                    Arrays store fixed-size sequences:
+                    <code>
+                        int numbers[5] = {1, 2, 3, 4, 5};
+                    </code>
+                </p>
+                <ul>
+                    <li>Fixed size set at declaration.</li>
+                    <li>Access via zero-based index.</li>
+                    <li>Initialize with values or default to 0.</li>
+                    <li>Out-of-bounds access is undefined.</li>
+                    <li>Used for sequential data storage.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Sizeof()_operator">
+            <header>Sizeof() operator</header>
+            <article>
+                <p>
+                    Returns the size of a type or variable in bytes:
+                    <code>
+                        int arr[5];
+                        int size = sizeof(arr); // 20 (5 ints * 4 bytes)
+                    </code>
+                </p>
+                <ul>
+                    <li>Works with types or variables.</li>
+                    <li>Array size: <code>sizeof(arr) / sizeof(arr[0])</code>.</li>
+                    <li>Size varies by architecture.</li>
+                    <li>Useful for loop bounds.</li>
+                    <li>Evaluated at compile time.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Iterate_over_an_array">
+            <header>Iterate over an array</header>
+            <article>
+                <p>
+                    Use a loop to access array elements:
+                    <code>
+                        int arr[3] = {1, 2, 3};
+                        for (int i = 0; i &lt; 3; i++) {
+                            std::cout &lt;&lt; arr[i];
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Use <code>for</code> or <code>while</code> loops.</li>
+                    <li>Access via index: <code>arr[i]</code>.</li>
+                    <li>Avoid hardcoding array size.</li>
+                    <li>Check bounds to prevent errors.</li>
+                    <li>Can modify elements during iteration.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Foreach_loop">
+            <header>Foreach loop</header>
+            <article>
+                <p>
+                    Range-based for loop (C++11):
+                    <code>
+                        int arr[3] = {1, 2, 3};
+                        for (int num : arr) {
+                            std::cout &lt;&lt; num;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Simplifies array iteration.</li>
+                    <li>Works with containers like <code>std::vector</code>.</li>
+                    <li>Use <code>auto</code> for type deduction.</li>
+                    <li>Read-only unless using references.</li>
+                    <li>Introduced in C++11.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Pass_array_to_a_function">
+            <header>Pass array to a function</header>
+            <article>
+                <p>
+                    Arrays are passed as pointers:
+                    <code>
+                        void printArray(int arr[], int size) {
+                            for (int i = 0; i &lt; size; i++) {
+                                std::cout &lt;&lt; arr[i];
+                            }
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Pass size explicitly.</li>
+                    <li>Modifications affect original array.</li>
+                    <li>Use <code>const</code> to prevent changes.</li>
+                    <li>Pointer decay occurs in functions.</li>
+                    <li>Call with array name: <code>printArray(arr, 5)</code>.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Search_an_array_for_an_element">
+            <header>Search an array for an element</header>
+            <article>
+                <p>
+                    Linear search example:
+                    <code>
+                        int find(int arr[], int size, int target) {
+                            for (int i = 0; i &lt; size; i++) {
+                                if (arr[i] == target) return i;
+                            }
+                            return -1;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Returns index or -1 if not found.</li>
+                    <li>Works with unsorted arrays.</li>
+                    <li>Linear time complexity.</li>
+                    <li>Use <code>std::find</code> for standard solution.</li>
+                    <li>Binary search faster for sorted arrays.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Sort_an_array">
+            <header>Sort an array</header>
+            <article>
+                <p>
+                    Use <code>std::sort</code> from <code>&lt;algorithm&gt;</code>:
+                    <code>
+                        #include &lt;algorithm&gt;
+                        int arr[5] = {5, 2, 8, 1, 9};
+                        std::sort(arr, arr + 5);
+                    </code>
+                </p>
+                <ul>
+                    <li>Sorts ascending by default.</li>
+                    <li>Custom comparators for other orders.</li>
+                    <li>Requires <code>&lt;algorithm&gt;</code>.</li>
+                    <li>Efficient for large datasets.</li>
+                    <li>Modifies array in place.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Fill()_function">
+            <header>Fill() function</header>
+            <article>
+                <p>
+                    Use <code>std::fill</code> to set array elements:
+                    <code>
+                        #include &lt;algorithm&gt;
+                        int arr[5];
+                        std::fill(arr, arr + 5, 0); // Fills with 0
+                    </code>
+                </p>
+                <ul>
+                    <li>Sets range to specified value.</li>
+                    <li>Requires <code>&lt;algorithm&gt;</code>.</li>
+                    <li>Works with any container.</li>
+                    <li>Faster than manual loops.</li>
+                    <li>Specify start and end iterators.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Fill_an_array_with_user_input">
+            <header>Fill an array with user input</header>
+            <article>
+                <p>
+                    Read user input into an array:
+                    <code>
+                        int arr[3];
+                        for (int i = 0; i &lt; 3; i++) {
+                            std::cin &gt;&gt; arr[i];
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Uses <code>std::cin</code> for input.</li>
+                    <li>Loop over array indices.</li>
+                    <li>Validate input to avoid errors.</li>
+                    <li>Combine with prompts for clarity.</li>
+                    <li>Clear buffer with <code>std::cin.ignore()</code>.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Multidimensional_arrays">
+            <header>Multidimensional arrays</header>
+            <article>
+                <p>
+                    Arrays of arrays, e.g., 2D:
+                    <code>
+                        int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+                    </code>
+                </p>
+                <ul>
+                    <li>Used for grids or matrices.</li>
+                    <li>Access: <code>matrix[0][1]</code>.</li>
+                    <li>Fixed size per dimension.</li>
+                    <li>Requires nested loops for iteration.</li>
+                    <li>Stored contiguously in memory.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Memory_addresses">
+            <header>Memory addresses</header>
+            <article>
+                <p>
+                    Use <code>&amp;</code> to get a variable’s address:
+                    <code>
+                        int x = 10;
+                        std::cout &lt;&lt; &amp;x; // Prints memory address
+                    </code>
+                </p>
+                <ul>
+                    <li>Addresses are hexadecimal.</li>
+                    <li>Unique per variable.</li>
+                    <li>Used with pointers.</li>
+                    <li>Changes each program run.</li>
+                    <li>Fundamental for memory management.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Pass_by_VALUE_vs_pass_by_REFERENCE">
+            <header>Pass by VALUE vs pass by REFERENCE</header>
+            <article>
+                <p>
+                    Pass by value copies; pass by reference modifies:
+                    <code>
+                        void byValue(int x) { x++; }
+                        void byReference(int&amp; x) { x++; }
+                    </code>
+                </p>
+                <ul>
+                    <li>Value copying preserves original.</li>
+                    <li>Reference modifies original.</li>
+                    <li>References use <code>&amp;</code> in signature.</li>
+                    <li>References are efficient for large data.</li>
+                    <li>Use <code>const</code> for read-only references.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Const_parameters">
+            <header>Const parameters</header>
+            <article>
+                <p>
+                    Prevent modification of parameters:
+                    <code>
+                        void print(const int&amp; x) { std::cout &lt;&lt; x; }
+                    </code>
+                </p>
+                <ul>
+                    <li>Ensures parameter integrity.</li>
+                    <li>Common with references.</li>
+                    <li>Also works with pointers.</li>
+                    <li>Improves code safety.</li>
+                    <li>Allows compiler optimizations.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Pointers">
+            <header>Pointers</header>
+            <article>
+                <p>
+                    Store memory addresses:
+                    <code>
+                        int x = 10;
+                        int* ptr = &amp;x;
+                        std::cout &lt;&lt; *ptr; // Dereference to get 10
+                    </code>
+                </p>
+                <ul>
+                    <li>Declared with <code>*</code>.</li>
+                    <li>Dereference with <code>*</code>.</li>
+                    <li>Points to specific types.</li>
+                    <li>Used for dynamic memory.</li>
+                    <li>Requires careful handling.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Null_pointers">
+            <header>Null pointers</header>
+            <article>
+                <p>
+                    Pointers not pointing anywhere:
+                    <code>
+                        int* ptr = nullptr;
+                    </code>
+                </p>
+                <ul>
+                    <li>Uses <code>nullptr</code> (C++11).</li>
+                    <li>Prevents undefined behavior.</li>
+                    <li>Check before dereferencing.</li>
+                    <li>Safer than <code>NULL</code>.</li>
+                    <li>Initializes unassigned pointers.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Dynamic_memory">
+            <header>Dynamic memory</header>
+            <article>
+                <p>
+                    Allocate memory with <code>new</code>, free with <code>delete</code>:
+                    <code>
+                        int* ptr = new int(10);
+                        delete ptr;
+                    </code>
+                </p>
+                <ul>
+                    <li><code>new</code> allocates at runtime.</li>
+                    <li><code>delete</code> frees memory.</li>
+                    <li>Prevents memory leaks.</li>
+                    <li>Used for dynamic data structures.</li>
+                    <li>Manage to avoid dangling pointers.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Recursion">
+            <header>Recursion</header>
+            <article>
+                <p>
+                    Functions calling themselves:
+                    <code>
+                        int factorial(int n) {
+                            if (n &lt;= 1) return 1;
+                            return n * factorial(n - 1);
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Requires base case.</li>
+                    <li>Useful for hierarchical problems.</li>
+                    <li>Can be memory-intensive.</li>
+                    <li>Alternative to iteration.</li>
+                    <li>Stack overflow risk for deep recursion.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Function_templates">
+            <header>Function templates</header>
+            <article>
+                <p>
+                    Generic functions for multiple types:
+                    <code>
+                        template &lt;typename T&gt;
+                        T max(T a, T b) {
+                            return (a &gt; b) ? a : b;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Uses <code>template</code> keyword.</li>
+                    <li>Works with any type.</li>
+                    <li>Reduces code duplication.</li>
+                    <li>Compile-time type safety.</li>
+                    <li>Used in STL containers.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Structs">
+            <header>Structs</header>
+            <article>
+                <p>
+                    Group related data:
+                    <code>
+                        struct Person {
+                            std::string name;
+                            int age;
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Public members by default.</li>
+                    <li>Create instances: <code>Person p;</code>.</li>
+                    <li>Access with dot operator.</li>
+                    <li>Simpler than classes.</li>
+                    <li>Can include methods.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Pass_structs_as_arguments">
+            <header>Pass structs as arguments</header>
+            <article>
+                <p>
+                    Pass structs by reference for efficiency:
+                    <code>
+                        void printPerson(const Person&amp; p) {
+                            std::cout &lt;&lt; p.name &lt;&lt; ", " &lt;&lt; p.age;
+                        }
+                    </code>
+                </p>
+                <ul>
+                    <li>Reference avoids copying.</li>
+                    <li><code>const</code> prevents modification.</li>
+                    <li>Access members with dot operator.</li>
+                    <li>Efficient for large structs.</li>
+                    <li>Common in function arguments.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Enums">
+            <header>Enums</header>
+            <article>
+                <p>
+                    Define named integer constants:
+                    <code>
+                        enum Color { RED, GREEN, BLUE };
+                        Color c = RED;
+                    </code>
+                </p>
+                <ul>
+                    <li>Defaults to <code>int</code> type.</li>
+                    <li>Improves code readability.</li>
+                    <li>Values start at 0 by default.</li>
+                    <li>Scoped enums: <code>enum class</code>.</li>
+                    <li>Used for fixed option sets.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Object_Oriented_Programming">
+            <header>Object Oriented Programming</header>
+            <article>
+                <p>
+                    C++ supports OOP with classes:
+                    <code>
+                        class Car {
+                        public:
+                            std::string model;
+                            void drive() { std::cout &lt;&lt; "Driving"; }
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Encapsulation hides data.</li>
+                    <li>Classes define objects.</li>
+                    <li>Supports inheritance.</li>
+                    <li>Methods define behavior.</li>
+                    <li>Polymorphism via virtual functions.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Constructors">
+            <header>Constructors</header>
+            <article>
+                <p>
+                    Initialize objects:
+                    <code>
+                        class Car {
+                        public:
+                            std::string model;
+                            Car(std::string m) : model(m) {}
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Called on object creation.</li>
+                    <li>Can take parameters.</li>
+                    <li>Initializer lists for efficiency.</li>
+                    <li>No return type.</li>
+                    <li>Matches class name.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Constructor_overloading">
+            <header>Constructor overloading</header>
+            <article>
+                <p>
+                    Multiple constructors with different parameters:
+                    <code>
+                        class Car {
+                        public:
+                            std::string model;
+                            int year;
+                            Car(std::string m) : model(m), year(0) {}
+                            Car(std::string m, int y) : model(m), year(y) {}
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Different parameter lists.</li>
+                    <li>Flexible object creation.</li>
+                    <li>Compiler selects based on arguments.</li>
+                    <li>Reduces code duplication.</li>
+                    <li>Can call other constructors.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Getters_&_setters">
+            <header>Getters & setters</header>
+            <article>
+                <p>
+                    Control access to class members:
+                    <code>
+                        class Car {
+                        private:
+                            std::string model;
+                        public:
+                            void setModel(std::string m) { model = m; }
+                            std::string getModel() { return model; }
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Getters retrieve private data.</li>
+                    <li>Setters validate and set data.</li>
+                    <li>Enforces encapsulation.</li>
+                    <li>Protects class invariants.</li>
+                    <li>Common in OOP design.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Inheritance">
+            <header>Inheritance</header>
+            <article>
+                <p>
+                    Classes inherit properties and methods:
+                    <code>
+                        class Vehicle {
+                        public:
+                            std::string brand;
+                        };
+                        class Car : public Vehicle {
+                        public:
+                            std::string model;
+                        };
+                    </code>
+                </p>
+                <ul>
+                    <li>Derived class inherits base class.</li>
+                    <li><code>public</code> inheritance preserves access.</li>
+                    <li>Supports polymorphism.</li>
+                    <li><code>protected</code> for derived access.</li>
+                    <li>Multiple inheritance is possible.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is based on
+                        <a
+                            href="https://www.youtube.com/watch?v=-TkoO8Z07hI"
+                            target="_blank"
+                            >C++ Course</a
+                        >
+                        by
+                        <a 
+                            href="https://www.youtube.com/@BroCodez">
+                            Bro Code
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
